@@ -4,7 +4,10 @@
   "description": "CDK constructs to deploy a Virtual Private Cloud into your AWS account",
   "main": "index.js",
   "scripts": {
-    "deploy": "cdk deploy --all"
+    "deploy": "cdk deploy --all",
+    "deploy:vpc": "cdk deploy MyTestVPC",
+    "deploy:ec2-isolated": "cdk deploy MyTestEC2-Isolated",
+    "deploy:ec2-private": "cdk deploy MyTestEC2-PrivateWithEgress"
   },
   "author": "",
   "license": "ISC",
