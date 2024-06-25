@@ -5,18 +5,21 @@
   "main": "index.js",
   "scripts": {
     "deploy": "cdk deploy --all",
+    "list": "cdk list",
     "deploy:vpc": "cdk deploy MyTestVPC",
     "deploy:ec2-isolated": "cdk deploy MyTestEC2-Isolated",
-    "deploy:ec2-private": "cdk deploy MyTestEC2-PrivateWithEgress"
+    "deploy:ec2-private": "cdk deploy MyTestEC2-PrivateWithEgress",
+    "deploy:ec2-connectivity": "cdk deploy MyEC2ConectivityStack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "aws-cdk": "^2.133.0",
-    "ts-node": "^10.9.2",
+    "esrun": "^3.2.26",
     "typescript": "^5.4.2"
   },
   "dependencies": {
+    "@open-constructs/aws-cdk": "^0.0.0",
     "aws-cdk-lib": "^2.133.0"
   }
 }
