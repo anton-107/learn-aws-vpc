@@ -7,9 +7,11 @@
     "deploy": "cdk deploy --all",
     "list": "cdk list",
     "deploy:vpc": "cdk deploy MyTestVPC",
+    "deploy:security": "cdk deploy MyTestSecurityStack",
     "deploy:ec2-isolated": "cdk deploy MyTestEC2-Isolated",
     "deploy:ec2-private": "cdk deploy MyTestEC2-PrivateWithEgress",
-    "deploy:ec2-connectivity": "cdk deploy MyEC2ConectivityStack"
+    "deploy:ec2-connectivity": "cdk deploy MyEC2ConectivityStack",
+    "deploy:rds": "cdk deploy MyTestRDS"
   },
   "author": "",
   "license": "ISC",

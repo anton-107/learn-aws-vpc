@@ -1,6 +1,6 @@
 import { IInstanceConnectEndpoint } from "@open-constructs/aws-cdk/lib/aws-ec2";
 import { App, Stack } from "aws-cdk-lib";
-import { AmazonLinuxGeneration, AmazonLinuxImage, ISubnet, Instance, InstanceClass, InstanceSize, InstanceType, KeyPair, Port, SubnetSelection, Vpc } from "aws-cdk-lib/aws-ec2";
+import { AmazonLinuxGeneration, AmazonLinuxImage, ISubnet, Instance, InstanceClass, InstanceSize, InstanceType, KeyPair, Port, Vpc } from "aws-cdk-lib/aws-ec2";
 
 interface EC2StackProperties {
   nameSuffix: string;
