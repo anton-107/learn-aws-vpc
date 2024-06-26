@@ -17,3 +17,4 @@ CDK constructs to deploy a Virtual Private Cloud into your AWS account
 5. 1 EC2 instance in an isolated subnet
 6. 1 EC2 instance in an private subnet with egress
 7. 1 EC2 Instance Connect endpoint
+8. 1 RDS instance with Postgres database in an isolated subnet
