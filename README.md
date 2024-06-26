@@ -12,6 +12,7 @@ CDK constructs to deploy a Virtual Private Cloud into your AWS account
 ## What gets deployed?
 1. 1 VPC
 2. 6 subnets
+3. Security group for access from CloudShell
 3. 1 Internet gateway
 4. 1 NAT Gateway
 5. 1 EC2 instance in an isolated subnet

@@ -11,7 +11,8 @@
     "deploy:ec2-isolated": "cdk deploy MyTestEC2-Isolated",
     "deploy:ec2-private": "cdk deploy MyTestEC2-PrivateWithEgress",
     "deploy:ec2-connectivity": "cdk deploy MyEC2ConectivityStack",
-    "deploy:rds": "cdk deploy MyTestRDS"
+    "deploy:rds": "cdk deploy MyTestRDS",
+    "deploy:docdb": "cdk deploy MyTestDocumentDB"
   },
   "author": "",
   "license": "ISC",

@@ -4,6 +4,7 @@ import { EC2Stack } from "./stacks/ec2-stack";
 import { EC2ConectivityStack } from "./stacks/ec2-connectivity-stack";
 import { RDSStack } from "./stacks/rds-stack";
 import { SecurityStack } from "./stacks/security-stack";
+import { DocumentDBStack } from "./stacks/docdb-stack";
 
 function main() {
   const app = new App();
@@ -27,6 +28,11 @@ function main() {
     connectEndpoint: connectivity.ec2InstanceConnectEndpoint
   });
   new RDSStack(app, {
+    vpc: vpc.vpc,
+    subnets: vpc.isolatedSubnets,
+    allowedSecurityGroups: [security.cloudShellSecurityGroup]
+  });
+  new DocumentDBStack(app, {
     vpc: vpc.vpc,
     subnets: vpc.isolatedSubnets,
     allowedSecurityGroups: [security.cloudShellSecurityGroup]
