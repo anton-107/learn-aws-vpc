@@ -19,13 +19,15 @@ function main() {
     nameSuffix: "Isolated",
     vpc: vpc.vpc,
     subnets: vpc.isolatedSubnets,
-    connectEndpoint: connectivity.ec2InstanceConnectEndpoint
+    connectEndpoint: connectivity.ec2InstanceConnectEndpoint,
+    allowedSecurityGroups: [security.cloudShellSecurityGroup]
   });
   new EC2Stack(app, {
     nameSuffix: "PrivateWithEgress",
     vpc: vpc.vpc,
     subnets: vpc.privateSubnets,
-    connectEndpoint: connectivity.ec2InstanceConnectEndpoint
+    connectEndpoint: connectivity.ec2InstanceConnectEndpoint,
+    allowedSecurityGroups: [security.cloudShellSecurityGroup]
   });
   new RDSStack(app, {
     vpc: vpc.vpc,
