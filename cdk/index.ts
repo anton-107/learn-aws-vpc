@@ -5,6 +5,7 @@ import { EC2ConectivityStack } from "./stacks/ec2-connectivity-stack";
 import { RDSStack } from "./stacks/rds-stack";
 import { SecurityStack } from "./stacks/security-stack";
 import { DocumentDBStack } from "./stacks/docdb-stack";
+import { APIGatewayStack } from "./stacks/apigw-stack";
 
 function main() {
   const app = new App();
@@ -38,6 +39,9 @@ function main() {
     vpc: vpc.vpc,
     subnets: vpc.isolatedSubnets,
     allowedSecurityGroups: [security.cloudShellSecurityGroup]
+  });
+  new APIGatewayStack(app, {
+    allowedSourceVPC: vpc.vpc
   });
 }
 main();
